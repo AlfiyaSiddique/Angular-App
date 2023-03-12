@@ -1,5 +1,5 @@
 [build]
-publish = "dist/my-angular-app"
+publish = "dist/angular-app"
 command = "ng build --prod"
 
 [[redirects]]
