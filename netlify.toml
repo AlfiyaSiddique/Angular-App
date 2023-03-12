@@ -11,7 +11,7 @@ command = "ng build"
   to = "/.netlify/functions/api/:splat"
   status = 200
 
-[[functions]]
-  directory = "functions"
-  command = "npm run start"
-  runtime = "nodejs16.x"
+  [functions]
+  external_node_modules = [
+    "json-server",
+  ]
