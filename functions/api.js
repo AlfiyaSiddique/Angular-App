@@ -10,6 +10,8 @@ server.use((req, res, next) => {
 server.use(middlewares);
 server.use( router); 
 
-server.use('/api', router); 
+server.use(router); 
 
-module.exports = server;
+server.listen(3000, ()=>{
+    console.log("running")
+})
