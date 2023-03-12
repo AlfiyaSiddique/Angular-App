@@ -1,4 +1,4 @@
 [[redirects]]
 from = "/api/*"
-to = "http://localhost:3000/api/:splat"
+to = "https://hilarious-froyo-98fdec.netlify.app/:splat"
 status = 200
