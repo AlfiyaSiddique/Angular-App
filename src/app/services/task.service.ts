@@ -23,11 +23,11 @@ constructor(private _http: HttpClient) { }
    }else{
     localStorage.setItem("todo", JSON.stringify([data]))
    }
-        return this._http.post("https://main--enchanting-marshmallow-109241.netlify.app/.netlify/functions/api", data)
+        return this._http.post("https://main--enchanting-marshmallow-109241.netlify.app/task", data)
   }
 
   getTaskList(): Observable<any>{
-    return this._http.get("https://main--enchanting-marshmallow-109241.netlify.app/.netlify/functions/api")
+    return this._http.get("https://main--enchanting-marshmallow-109241.netlify.app/task")
 }
 
 deleteTask(id: Number): Observable<any>{
@@ -40,6 +40,6 @@ deleteTask(id: Number): Observable<any>{
       }
   }
   localStorage.setItem("todo", JSON.stringify(newArray))
-  return this._http.delete(`https://main--enchanting-marshmallow-109241.netlify.app/.netlify/functions/api/${id}`)
+  return this._http.delete(`https://main--enchanting-marshmallow-109241.netlify.app/task/${id}`)
 }
 }
