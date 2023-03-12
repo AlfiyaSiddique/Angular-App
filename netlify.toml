@@ -10,3 +10,8 @@ command = "ng build"
 from = "/api/*"
 to = "https://hilarious-froyo-98fdec.netlify.app/:splat"
 status = 200
+
+[[functions]]
+  directory = "functions"
+  command = "npm run start"
+  runtime = "nodejs16.x"
