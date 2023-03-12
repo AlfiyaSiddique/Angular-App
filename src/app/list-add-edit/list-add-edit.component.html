@@ -1,0 +1,34 @@
+<div mat-dialog-title>
+  <h1>Add Task</h1>
+</div>
+<form [formGroup]="listForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+    <div >
+      <mat-form-field appearance="outline" class="row">
+        <mat-label>Task Name</mat-label>
+        <input matInput type="text" placeholder="Ex. Cooking" formControlName="task">
+      </mat-form-field>
+    </div>
+    <div >
+      <mat-form-field appearance="outline" class="row">
+        <mat-label>Completion Time</mat-label>
+        <input matInput placeholder="Ex: 2 hr or 1:30 hr" formControlName="completionTime">
+        <mat-hint>In hours</mat-hint>
+      </mat-form-field>
+    </div>
+    <div >
+      <mat-form-field appearance="outline" class="row">
+        <mat-label>Due Date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="dueDate">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions class="action">
+    <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+    <button mat-raised-button color="primary" type="submit">Add</button>
+  </div>
+</form>
+

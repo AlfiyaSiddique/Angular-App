@@ -1,0 +1,14 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+
+.tableContainer{
+  width: 80vw;
+  margin: 20px auto;
+  border-radius: 20px;
+}
+
+th, td{
+  text-align: center;
+}
