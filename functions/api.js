@@ -7,6 +7,6 @@ server.use((req, res, next) => {
   next();
 });
 
-server.use('/api', router); 
+server.use('/task', router); 
 
 module.exports = server;
