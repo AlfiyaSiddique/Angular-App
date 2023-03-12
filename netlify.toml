@@ -7,9 +7,9 @@ command = "ng build"
   publish = "dist/crud-in-angular"
 
 [[redirects]]
-from = "/api/*"
-to = "https://hilarious-froyo-98fdec.netlify.app/:splat"
-status = 200
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
 
 [[functions]]
   directory = "functions"
